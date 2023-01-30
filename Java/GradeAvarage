@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Hm {
+
+	public static void main(String[] args) {
+		
+	Scanner input = new Scanner(System.in);
+	
+	int Fizik, Kimya, Türkçe, Tarih, Müzik,toplam;
+	
+	System.out.println("Fizik Notunuzu Gir: ");
+	Fizik = input.nextInt();
+	System.out.println("Kimya Notunuzu Gir: ");
+	Kimya = input.nextInt();
+	System.out.println("Türkçe Notunuzu Gir: ");
+	Türkçe = input.nextInt();
+	System.out.println("Tarih Notunuzu Gir: ");
+	Tarih = input.nextInt();
+	System.out.println("Müzik Notunuzu Gir: ");
+	Müzik = input.nextInt();
+	
+	toplam = (Fizik+Kimya+Türkçe+Tarih+Müzik);
+	double ort = (Fizik+Kimya+Türkçe+Tarih+Müzik)/5;
+	boolean sonuc = ort >= 60.0;
+    String sonuc2 = sonuc ? "Başarılı" : "Başarısız!";
+    System.out.println("Ortalaman: " + ort + " " + sonuc2);
+		        
+		     
+	}
+
+}
