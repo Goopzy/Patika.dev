@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Hm {
+
+	public static void main(String[] args) {
+		
+		Scanner input  = new Scanner(System.in);
+		
+		double elma,armut,domates,muz,patlıcan,  tutar,kilo;
+		
+		System.out.println("Armut kaç kilo ?");
+		armut = input.nextDouble();
+		
+		System.out.println("elma kaç kilo ?");
+		elma = input.nextDouble();
+		
+		System.out.println("domates kaç kilo ?");
+		domates = input.nextDouble();
+
+		System.out.println("muz kaç kilo ?");
+		muz = input.nextDouble();
+		
+		System.out.println("patlıcan kaç kilo ?");
+		patlıcan = input.nextDouble();
+		
+		tutar = (elma * 3.67)+(armut * 2.14)+(domates * 1.11)+(muz * 0.95)+(patlıcan * 5.00);
+		System.out.printf("\nToplam Tutar %.2f ",tutar);
+		
+		//
+	
+	}
+
+}
