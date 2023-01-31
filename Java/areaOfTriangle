@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Hm {
+
+	public static void main(String[] args) {
+		int a,b;
+		double c,u,cevre,alan;
+		
+		Scanner input = new Scanner(System.in);
+	System.out.println("Bir kenar girin");
+	a = input.nextInt();
+	System.out.println("Bir kenar Girin");
+	b = input.nextInt();
+	System.out.println("Bir Kenar Girin ");
+	c = input.nextInt();
+	
+	 u = (a+b+c) / 2;
+	 cevre = u*2;
+	 
+	 alan = Math.sqrt(u*(u-a)*(u-b)*(u-c));
+	 
+	 System.out.printf("Ücgenin alanı = %.2f", alan);
+	
+	}
+
+}
