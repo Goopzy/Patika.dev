@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Hm {
+
+	public static void main(String[] args) {
+	double kdv,kdvFiyat;
+	Scanner input = new Scanner(System.in);
+	
+	System.out.println("Fiyat Giriniz");
+	double fiyat = input.nextDouble();
+	
+	kdv = (fiyat > 0 && fiyat <=1000 )? 0.18 : 0.08;
+	kdvFiyat = fiyat*kdv;
+	
+	System.out.printf("Ürünün Kdv'siz Fiyatı "+fiyat);
+	System.out.printf("\nUrunuzun KDV'li tutari : %.2f", kdvFiyat + fiyat);
+	System.out.printf("\nÜrünün KDV tutarı %.2f ",kdvFiyat);
+	
+
+	
+	
+	
+	}
+
+}
