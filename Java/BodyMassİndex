@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Hm {
+
+	public static void main(String[] args) {
+		
+		double kg, boy, index;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Kilonuzu Giriniz");
+		kg = input.nextDouble();
+		System.out.println("Boyunuzu Giriniz");
+		boy = input.nextDouble();
+		
+		index = kg/(boy*boy);
+		System.out.printf("\nVücut Kitle İndeksiniz "+ index);
+	
+	
+	}
+
+}
