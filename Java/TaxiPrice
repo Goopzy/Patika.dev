@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Hm {
+
+	public static void main(String[] args) {
+		
+		double km = 2.20, tutar, ücret;
+		int min = 20, mesafe;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Mesafe Girin");
+		mesafe = input.nextInt();
+		tutar = mesafe*km+10;
+		
+		ücret = (tutar > 0 && tutar <=20)? 20 : tutar;
+		
+		System.out.printf("Toplam Ücret %.2f ",ücret);
+		
+		
+	
+	
+	}
+
+}
