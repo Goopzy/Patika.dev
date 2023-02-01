@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Hm {
+
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);	
+		
+		String userName,pass,sifre;
+		
+		System.out.println("Lütfen Kullanıcı Adınızı Giriniz");
+		userName = input.nextLine();
+		System.out.println("Lütfen Şifrenizi Giriniz");
+		pass = input.nextLine();
+		sifre="Goopzy123";
+		
+		if(userName.equals("Goopzy") && pass.equals("Goopzy123")) {
+			System.out.println("Giriş Yapılmıştır");
+		}
+		else  {
+			System.out.println("Şifreniz Yanlıştır.");
+			System.out.println("Yeni Şifre Giriniz");
+			pass = input.nextLine();
+			if(pass.equals(sifre)) {
+				System.out.println("Girdiğiniz Şifre ile Mevcut Şifreniz Aynı Olamaz");
+			}
+			else {
+				System.out.println("Şifre Başarılı Bir Şekilde Değiştirildi");
+			}
+		}
+	}
+}
