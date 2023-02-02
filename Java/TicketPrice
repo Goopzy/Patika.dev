@@ -40,6 +40,7 @@ public class Hm {
 			}
 			else {
 				System.out.println("Hatalı Veri Girdiniz");
+				return ;
 			}
 			
 		}
