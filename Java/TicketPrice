@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class Hm {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+	    double price,ageDiscount = 0,typeDiscount = 0,discount,agePrice,typePrice,count;
+	    int km,age,type;
+	    
+	    System.out.println("Mesafeyi km türünden giriniz ");
+	    km=scan.nextInt();
+	    System.out.println("Yaşınızı Giriniz ");
+	    age = scan.nextInt();
+	    if(age >= 0) {	
+	    	if (age <= 12) {
+		    	ageDiscount = 0.50;
+		    	
+		    }
+		    else if (age >=12 && age <=24) {
+		    	ageDiscount = 0.10;
+		    }
+		    else if (age >=65) {
+		    	ageDiscount = 0.30;
+		    }
+		    else {
+		    	ageDiscount = 0;
+		    }	
+	    } else {
+	    	System.out.println("Hatalı Veri Girdiniz");
+	    	return ;
+	    }
+	    
+	   System.out.println("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ):");
+	    type = scan.nextInt();
+	    if (type == 1 || type == 2) {
+			if (type == 1) {
+				typeDiscount = 0;
+			}else if(type == 2){
+				typeDiscount = 0.20;
+			}
+			else {
+				System.out.println("Hatalı Veri Girdiniz");
+			}
+			
+		}
+	    
+	    price = km * 0.10;
+	    agePrice = price * ageDiscount;
+	    discount = price - agePrice;
+	    typePrice = discount * typeDiscount;
+	    if(type == 1) {
+	    	count = (discount-typePrice);
+	    	 System.out.println("Toplam Tutar "+count);
+	    }else {
+	    	count = (discount-typePrice)*2;
+	    	 System.out.println("Toplam Tutar "+count);
+	    }
+	    
+	   
+	    
+	}
+}
+		
+	
