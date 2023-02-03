@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Hm {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int number, count = 0;
+		
+		do {
+			System.out.println("Bir Sayı Giriniz");
+			number = scan.nextInt();
+			if(number %2==0 ||number %4==0) {
+				count +=number;
+			}
+		} while (number %2==0);
+		System.out.println("Toplam "+count);
+	}
+}
