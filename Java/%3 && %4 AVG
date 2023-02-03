@@ -1,0 +1,33 @@
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Hm {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int k ;
+		int ortalama;
+		int sayac=0;
+		int toplam= 0;
+		System.out.println("Lütfen Bir Sayı Giriniz");
+		k = scan.nextInt();
+		
+		for(int i = 1; i<=k; i++) {
+			
+			if(i %3 == 0 && i %4 == 0) {
+				System.out.println(i);
+				toplam = toplam + i;
+				++sayac;
+			}
+			
+		}
+		System.out.println("---------------------------------");
+		System.out.println("Eleman Sayı = "+sayac);
+		System.out.println("--------------------------------");
+		System.out.println("Toplam = "+toplam);
+		System.out.println("--------------------------------");
+		ortalama = toplam/sayac;
+		System.out.println("Ortalaması = "+ortalama);
+		
+	}
+}
