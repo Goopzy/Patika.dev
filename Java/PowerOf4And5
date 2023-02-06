@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Hm {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Bir sayi Giriniz");
+		int number = scan.nextInt();
+		int j = 1;
+		int i = 1;
+
+		while (j < number) {
+			System.out.println("4. Kuvvetleri = "+j);
+			j *= 4;
+
+		}
+		System.out.println("----------------------------");
+		while (i < number) {
+			System.out.println("5. Kuvvetleri = "+i);
+			i *= 5;
+		}
+		scan.close();
+	}
+}
