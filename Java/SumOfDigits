@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Hm {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Bir Sayı Giriniz");
+		int number = scan.nextInt();
+		int tempNumber=0;
+		int result = 0;
+		
+		while(number != 0) {
+			tempNumber = number%10;
+			number /=10;
+			result += tempNumber; 
+		}
+		System.out.println(result);
+		
+	}
+}
