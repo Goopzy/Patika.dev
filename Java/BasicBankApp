@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class Hm {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String userName, pass;
+		int rating = 3, balance = 1500, price;
+		int select = 0;
+
+		while (rating > 0) {
+			System.out.println("Kullanıcı adınızı giriniz");
+			userName = scan.nextLine();
+			System.out.println("Şifre Giriniz");
+			pass = scan.nextLine();
+			if (userName.equals("serkancvk") && pass.equals("123")) {
+				System.out.println("Cıvak Banka Hoş Geldiniz");
+				while (select != 4) {
+					System.out.println("1-Bakiye Sorgulama\n" + "2-Para Çekme\n" + "3-Para Yatırma\n" + "4-Çıkış");
+					select = scan.nextInt();
+					switch (select) {
+					case 1:
+						System.out.println(balance);
+						break;
+					case 2:
+						System.out.println("Miktar Giriniz: ");
+						price = scan.nextInt();
+						if (price <= balance) {
+							balance -= price;
+							System.out.println(price + " TL çektiniz.");
+						} else {
+							System.out.println("Bakiyeniz yetersiz.");
+						}
+						break;
+					case 3:
+						System.out.println("Miktar Giriniz: ");
+						price = scan.nextInt();
+						balance += price;
+						System.out.println(price + " TL yatırdınız.");
+						break;
+					case 4:
+						System.out.println("Çıkış Yapıldı");
+						break;
+					default:
+						System.out.println("Hatalı İşlem");
+						break;
+					}
+
+				}
+				break;
+			} else {
+				rating--;
+				System.out.println("Hatalı Giriş Yaptınız");
+				if (rating == 0) {
+					System.out.println("Hesabınız bloke olmuştur");
+				} else {
+					System.out.println("Kalan Hakkınız : " + rating);
+				}
+			}
+
+		}
+
+	}
+}
