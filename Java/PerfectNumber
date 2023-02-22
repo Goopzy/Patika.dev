@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Hm {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Bir Sayı Gir : ");
+		int num = scan.nextInt();
+		int count = 0;
+		
+		for(int i = 1; i<num; i++) {
+			if(i != num &&num % i == 0 ) {
+				count+=i;
+			}
+			
+		}
+		if(num == count) {
+			System.out.println(num+" Mükemmel Sayıdır ");
+		}else {
+			System.out.println(num+" Mükemmel Sayı değildir");
+		}
+		
+	}
+}
