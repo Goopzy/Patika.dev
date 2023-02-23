@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Hm {
+
+	static int power(int number, int pow) {
+		
+	
+		if(pow ==0 ) {
+			return 0;
+
+		}else if(pow == 1) {
+			return number;
+		}
+		return number*power(number,(pow-1));
+		
+	
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Sayıyı Giriniz");
+		int number = scan.nextInt();
+		System.out.println("Kuvvetini Giriniz");
+		int pow = scan.nextInt();
+		System.out.println(power(number,pow));
+	}
+}
